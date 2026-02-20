@@ -3,8 +3,5 @@ namespace MantelLogParser.Tests;
 public class UnitTest1
 {
     [Fact]
-    public void Test1()
-    {
-
-    }
+    public void SmokeTest_ProjectLoads() => Assert.True(true);
 }

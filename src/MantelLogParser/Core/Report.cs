@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+namespace MantelLogParser.Core;
 
-namespace MantelLogParser.Core
+public sealed record CountResult(string Value, int Count);
+
+public sealed class Report
 {
-    internal class Report
-    {
-    }
+    public int UniqueIpAddressCount { get; init; }
+
+    public IReadOnlyList<CountResult> TopVisitedUrls { get; init; } = [];
+
+    public IReadOnlyList<CountResult> TopActiveIpAddresses { get; init; } = [];
 }
